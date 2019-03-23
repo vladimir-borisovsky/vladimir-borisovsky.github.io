@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+}
+.qwiz-box {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    position: relative;
+}
+.qwiz-start {
+    all: unset;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin: 0 5px;
+    background-color: rgb(37, 154, 220);
+    border-color: rgb(37, 154, 220);
+    color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.qwiz-start:hover {
+    background-color: #256adc;
+    border-color: #256adc;
+}
+.qwiz-start:active {
+    box-shadow: inset 0px 0.5px 5px #000;
+}
+.qwiz-bg {
+    font-family: arial, sans-serif;
+    background: url('../images/main-bg.jpg') center center no-repeat;
+    background-size: cover;
+    max-width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: 100000;
+}
+.qwiz-bg_active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+.qwiz-wrap-inner {
+    max-width: 600px;
+    margin: auto;
+    overflow-x: hidden;
+    color: #fff;
+    font-size: 18px;
+    height: auto;
+    padding-bottom: 50px;
+}
+.qwiz-questions-box {
+    width: 800%;
+    max-width: 800%;
+    padding-top: 80px;
+    display: flex;
+    position: relative;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+.qwiz-questions {
+    width: 100%;
+}
+.qwiz-title {
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.qwiz-title::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 40px;
+    bottom: -20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #fff;
+}
+.qwiz-content {
+    height: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.qwiz-checkboxes {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.qwiz-checkboxes label {
+    padding: 5px 0 5px 40px;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.qwiz-checkboxes label::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0px;
+    border-radius: 4px;
+}
+.qwiz-checkboxes label:hover {
+    cursor: pointer;
+}
+.qwiz-checkboxes input[type="checkbox"]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 20px;
+}
+.qwiz-checkboxes input[type="checkbox"] {
+    display: none;
+}
+.qwiz-budget,
+.qwiz-name,
+.qwiz-phone {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.qwiz-budget input,
+.qwiz-name input,
+.qwiz-phone input {
+    all: unset;
+    border-bottom: 2px solid #999;
+    margin-top: 50px;
+    transition: border .2s;
+}
+.qwiz-budget input,
+.qwiz-name input,
+.qwiz-phone input[type='number'] {
+    -moz-appearance: textfield;
+}
+.qwiz-budget input::-webkit-outer-spin-button,
+.qwiz-name input::-webkit-outer-spin-button,
+.qwiz-phone input::-webkit-outer-spin-button,
+.qwiz-budget input::-webkit-inner-spin-button,
+.qwiz-name input::-webkit-inner-spin-button,
+.qwiz-phone input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.qwiz-budget input:hover,
+.qwiz-name input:hover,
+.qwiz-phone input:hover,
+.qwiz-budget input:focus,
+.qwiz-name input:focus,
+.qwiz-phone input:focus {
+    border-bottom: 2px solid #fff;
+}
+.qwiz-phone {
+    text-align: center;
+}
+.qwiz-phone-recuired {
+    color: rgb(252, 48, 48);
+    font-size: 16px;
+    letter-spacing: .5px;
+    transition: opacity .3s;
+    opacity: 0;
+}
+.qwiz-tnx {
+    text-align: center;
+    font-size: 22px;
+    padding: 0 20px;
+}
+.qwiz-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+.qwiz-buttons button {
+    all: unset;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin: 0 5px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.qwiz-buttons button:hover {
+    background-color: #256adc;
+    border-color: #256adc;
+    cursor: pointer;
+}
+.qwiz-buttons button:active {
+    box-shadow:inset 0px .5px 5px #000;
+}
+.qwiz-buttons .next,
+.qwiz-buttons .send,
+.qwiz-buttons .home {
+    background-color: rgb(37, 154, 220);
+    border-color: rgb(37, 154, 220);
+}
+.qwiz-pagination {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.qwiz-pagination-line {
+    height: 2px;
+    background-color: #999;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.qwiz-pagination-line-inner {
+    background-color: #fff;
+    height: inherit;
+    width: 12.5%;
+    transition: .5s;
+}
