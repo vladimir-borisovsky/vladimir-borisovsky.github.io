@@ -15,6 +15,7 @@ window.onload = function() {
 
     qwizStart.onclick = function() {
         qwizBg.classList.add('qwiz-bg_active');
+        qwizBg.style.visibility = 'visible';
     }
 
     canselButton.onclick = function() {

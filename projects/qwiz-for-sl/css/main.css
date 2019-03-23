@@ -39,6 +39,7 @@ body {
     box-shadow: inset 0px 0.5px 5px #000;
 }
 .qwiz-bg {
+    visibility: hidden;
     font-family: arial, sans-serif;
     background: url('../images/main-bg.jpg') center center no-repeat;
     background-size: cover;
